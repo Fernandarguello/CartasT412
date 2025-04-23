@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Se ve bien, pero ¿es de Dios?</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  
+
+  <div id="card-container">
+    <!-- Tarjeta de bienvenida -->
+    <div class="card main-card" id="main-card">
+      <h2 class="main-card-title">Se ve bien, pero ¿es de Dios? ❤️‍🩹</h2>
+      <button class="main-card-btn" onclick="startCards()">Iniciar</button>
+    </div>
+
+    <!-- Tarjeta dinámica -->
+    <div class="card" id="real-card" style="display: none;">
+      <img src="" alt="Imagen de persona" class="avatar" />
+      <h2></h2>
+      <ul></ul>
+
+      <div class="buttons">
+        <button onclick="vote(true)">Sí</button>
+        <button onclick="vote(false)">No</button>
+      </div>
+
+      <div class="verse-btn-container">
+        <button class="show-verse-btn" onclick="toggleVerse()">Ver Versículo</button>
+      </div>
+
+      <div id="bible-verse" class="hidden-verse"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

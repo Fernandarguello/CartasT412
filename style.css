@@ -1,0 +1,156 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #a2d4f4, #dbeeff);
+  text-align: center;
+  color: #2c3e50;
+}
+
+h1 {
+  margin-top: 30px;
+  color: #34495e;
+}
+
+/* Contenedor principal */
+#card-container {
+  width: 380px;
+  margin: 30px auto;
+}
+
+/* Tarjetas */
+.card {
+  background-color: white;
+  border-radius: 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 310px;
+  margin: 20px auto;
+  text-align: center;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  position: relative;
+}
+
+/* Imagen circular */
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border: 4px solid #ecf0f1;
+}
+
+/* Lista de rasgos */
+.card ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+.card li {
+  margin: 5px 0;
+  padding-left: 18px;
+  position: relative;
+}
+.card li::before {
+  content: "✦";
+  position: absolute;
+  left: 0;
+  color: #3498db;
+}
+
+/* Botones */
+.buttons button {
+  margin: 10px;
+  padding: 12px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.buttons button:first-child {
+  background: #038052;
+  color: white;
+}
+.buttons button:last-child {
+  background: #e74c3c;
+  color: white;
+}
+.buttons button:hover {
+  transform: scale(1.05);
+}
+
+/* Versículo */
+.hidden-verse {
+  display: none;
+  margin-top: 20px;
+  font-style: italic;
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.verse-visible {
+  display: block;
+  animation: fadeIn 0.5s ease;
+}
+
+/* Botón ver versículo */
+.verse-btn-container {
+  margin-top: 20px;
+}
+.show-verse-btn {
+  background-color: #FF9800;
+  color: white;
+  border-radius: 25px;
+  padding: 12px 30px;
+  font-size: 1em;
+  border: none;
+  cursor: pointer;
+}
+.show-verse-btn:hover {
+  background-color: #FB8C00;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card.vote-yes {
+  transform: rotateY(20deg) translateX(100px);
+  opacity: 0;
+}
+
+.card.vote-no {
+  transform: rotateY(-20deg) translateX(-100px);
+  opacity: 0;
+}
+
+/* Estilo tarjeta de inicio */
+.main-card {
+  padding: 50px 30px;
+}
+.main-card-title {
+  margin-bottom: 20px;
+}
+.main-card-btn {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 14px 30px;
+  font-size: 1.1em;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.main-card-btn:hover {
+  background-color: #2980b9;
+}
